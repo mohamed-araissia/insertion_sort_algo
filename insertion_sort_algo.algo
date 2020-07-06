@@ -1,0 +1,21 @@
+ALGORITHM insertion_sert
+VAR
+    i,j,el : INTEGER;
+    arr : ARRAY_OF INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO
+        el:=arr[i];
+        j:=i-1;
+//Move elements of arr[0..i-1], that are greater than el to one position ahead of their current position 
+                
+         WHILE (j>=0 AND arr[j]<el) DO
+                arr[j+1]:=arr[j];
+                j:=j-1;
+
+
+         END_WHILE
+         
+    arr[j+1]:=el;
+    
+    END_FOR
+END
